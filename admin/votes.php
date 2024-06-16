@@ -84,7 +84,7 @@
             </section>
         </div>
 
-        <?php include 'includes/footer.php'; ?>
+
         <?php include 'includes/votes_modal.php'; ?>
     </div>
     <?php include 'includes/scripts.php'; ?>
