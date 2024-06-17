@@ -10,7 +10,7 @@
 		$query = $conn->query($sql);
 
 		if($query->num_rows < 1){
-			$_SESSION['error'] = 'Cannot find voter with the ID';
+			$_SESSION['error'] = 'Không thể tìm thấy cử tri với ID';
 		}
 		else{
 			$row = $query->fetch_assoc();
@@ -18,13 +18,13 @@
 				$_SESSION['voter'] = $row['id'];
 			}
 			else{
-				$_SESSION['error'] = 'Incorrect password';
+				$_SESSION['error'] = 'Mật khẩu không đúng';
 			}
 		}
 		
 	}
 	else{
-		$_SESSION['error'] = 'Input voter credentials first';
+		$_SESSION['error'] = 'Yêu cầu xác thực cử tri trước';
 	}
 
 	header('location: index.php');
