@@ -157,19 +157,13 @@
 				        		?>
                             <div class="text-center">
                                 <button
-                                    type="button"
-                                    class="btn btn-success btn-flat"
-                                    id="preview"
-                                ><i class="fa fa-file-text"></i> Xem trước</button>
-                                <button
                                     type="submit"
                                     class="btn btn-primary btn-flat"
                                     name="vote"
                                 ><i class="fa fa-check-square-o"></i> Nộp phiếu</button>
                             </div>
-                        </form>
-                        <!-- End Voting Ballot -->
-                        <?php
+                            <!-- End Voting Ballot -->
+                            <?php
 				    	}
 
 				    ?>
@@ -198,38 +192,22 @@
             $('.' + desc).iCheck('uncheck');
         });
 
-        $('#preview').click(function(e) {
-            e.preventDefault();
-            var form = $('#ballotForm').serialize();
-            if (form == '') {
-                $('.message').html('You must vote atleast one candidate');
-                $('#alert').show();
-            } else {
-                $.ajax({
-                    type: 'POST',
-                    url: 'preview.php',
-                    data: form,
-                    dataType: 'json',
-                    success: function(response) {
-                        if (response.error) {
-                            var errmsg = '';
-                            var messages = response.message;
-                            for (i in messages) {
-                                errmsg += messages[i];
-                            }
-                            $('.message').html(errmsg);
-                            $('#alert').show();
-                        } else {
-                            $('#preview_modal').modal('show');
-                            $('#preview_body').html(response.list);
-                        }
-                    }
-                });
-            }
-
-        });
-
     });
+
+    // function validateForm() {
+    //     var valid = true;
+    //     var positions = document.querySelectorAll('.box.box-solid');
+    //     positions.forEach(function(position) {
+    //         var inputs = position.querySelectorAll(
+    //             'input[type="radio"]:checked, input[type="checkbox"]:checked');
+    //         if (inputs.length === 0) {
+    //             valid = false;
+    //             alert('Bạn phải chọn ít nhất một ứng viên cho vị trí ' + position.querySelector('.box-title')
+    //                 .innerText);
+    //         }
+    //     });
+    //     return valid;
+    // };
     </script>
 </body>
 
