@@ -25,17 +25,17 @@
 							foreach($_POST[$position] as $key => $values){
 								$sql_array[] = "INSERT INTO votes (voters_id, candidate_id, position_id) VALUES ('".$voter['id']."', '$values', '$pos_id')";
 							}
-
 						}
-						
 					}
 					else{
 						$candidate = $_POST[$position];
 						$sql_array[] = "INSERT INTO votes (voters_id, candidate_id, position_id) VALUES ('".$voter['id']."', '$candidate', '$pos_id')";
 					}
-
 				}
-				
+				else{
+					$error = true;
+					$_SESSION['error'][] = 'Bạn phải chọn ít nhất một ứng cử viên cho vị trí '.$row['description'];
+				}
 			}
 
 			if(!$error){
@@ -45,16 +45,12 @@
 
 				unset($_SESSION['post']);
 				$_SESSION['success'] = 'Đã nộp phiếu';
-
 			}
-
 		}
-
 	}
 	else{
 		$_SESSION['error'][] = 'Vui lòng chọn ứng cử viên trước';
 	}
 
 	header('location: home.php');
-
 ?>
