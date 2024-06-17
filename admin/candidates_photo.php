@@ -10,7 +10,7 @@
 		
 		$sql = "UPDATE candidates SET photo = '$filename' WHERE id = '$id'";
 		if($conn->query($sql)){
-			$_SESSION['success'] = 'Photo updated successfully';
+			$_SESSION['success'] = 'Cập nhật ảnh thành công';
 		}
 		else{
 			$_SESSION['error'] = $conn->error;
@@ -18,7 +18,7 @@
 
 	}
 	else{
-		$_SESSION['error'] = 'Select candidate to update photo first';
+		$_SESSION['error'] = 'Chọn ứng củ viên để cập nhật ảnh';
 	}
 
 	header('location: candidates.php');
