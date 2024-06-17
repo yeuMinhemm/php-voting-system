@@ -120,7 +120,7 @@
                 $sql = "SELECT * FROM votes GROUP BY voters_id";
                 $query = $conn->query($sql);
 
-                echo "<h3>".$query->num_rows."</h3>";
+                echo "<h3>".($query->num_rows - 1)."</h3>";
               ?>
 
                                 <p>Cử tri đã bầu cử</p>

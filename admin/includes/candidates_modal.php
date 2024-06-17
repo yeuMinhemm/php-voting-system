@@ -26,7 +26,7 @@
                         <label
                             for="firstname"
                             class="col-sm-3 control-label"
-                        >Tên</label>
+                        >Họ</label>
 
                         <div class="col-sm-9">
                             <input
@@ -42,7 +42,7 @@
                         <label
                             for="lastname"
                             class="col-sm-3 control-label"
-                        >Họ</label>
+                        >Tên</label>
 
                         <div class="col-sm-9">
                             <input
