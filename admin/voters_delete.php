@@ -5,14 +5,14 @@
 		$id = $_POST['id'];
 		$sql = "DELETE FROM voters WHERE id = '$id'";
 		if($conn->query($sql)){
-			$_SESSION['success'] = 'Voter deleted successfully';
+			$_SESSION['success'] = 'Xóa thành công';
 		}
 		else{
 			$_SESSION['error'] = $conn->error;
 		}
 	}
 	else{
-		$_SESSION['error'] = 'Select item to delete first';
+		$_SESSION['error'] = 'Hãy chọn cử tri trước';
 	}
 
 	header('location: voters.php');

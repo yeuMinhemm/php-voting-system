@@ -15,7 +15,7 @@
 
 		$sql = "INSERT INTO voters (voters_id, password, firstname, lastname, photo) VALUES ('$voter', '$password', '$firstname', '$lastname', '$filename')";
 		if($conn->query($sql)){
-			$_SESSION['success'] = 'Voter added successfully';
+			$_SESSION['success'] = 'Thêm thành công';
 		}
 		else{
 			$_SESSION['error'] = $conn->error;
@@ -23,7 +23,7 @@
 
 	}
 	else{
-		$_SESSION['error'] = 'Fill up add form first';
+		$_SESSION['error'] = 'Vui lòng điền đầy đủ thông tin';
 	}
 
 	header('location: voters.php');

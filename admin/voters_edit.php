@@ -20,14 +20,14 @@
 
 		$sql = "UPDATE voters SET firstname = '$firstname', lastname = '$lastname', password = '$password' WHERE id = '$id'";
 		if($conn->query($sql)){
-			$_SESSION['success'] = 'Voter updated successfully';
+			$_SESSION['success'] = 'Cập nhật thành công';
 		}
 		else{
 			$_SESSION['error'] = $conn->error;
 		}
 	}
 	else{
-		$_SESSION['error'] = 'Fill up edit form first';
+		$_SESSION['error'] = 'Vui lòng điền đầy đủ thông tin';
 	}
 
 	header('location: voters.php');

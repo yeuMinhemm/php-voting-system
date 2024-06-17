@@ -5,14 +5,14 @@
 		$id = $_POST['id'];
 		$sql = "DELETE FROM positions WHERE id = '$id'";
 		if($conn->query($sql)){
-			$_SESSION['success'] = 'Position deleted successfully';
+			$_SESSION['success'] = 'Xóa thành công';
 		}
 		else{
 			$_SESSION['error'] = $conn->error;
 		}
 	}
 	else{
-		$_SESSION['error'] = 'Select item to delete first';
+		$_SESSION['error'] = 'Hãy chọn vị trí ứng cử trước';
 	}
 
 	header('location: positions.php');

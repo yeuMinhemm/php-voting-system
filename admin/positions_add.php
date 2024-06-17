@@ -13,7 +13,7 @@
 		
 		$sql = "INSERT INTO positions (description, max_vote, priority) VALUES ('$description', '$max_vote', '$priority')";
 		if($conn->query($sql)){
-			$_SESSION['success'] = 'Position added successfully';
+			$_SESSION['success'] = 'Thêm vị trí thành công';
 		}
 		else{
 			$_SESSION['error'] = $conn->error;
@@ -21,7 +21,7 @@
 
 	}
 	else{
-		$_SESSION['error'] = 'Fill up add form first';
+		$_SESSION['error'] = 'Vui lòng điền đầy đủ thông tin';
 	}
 
 	header('location: positions.php');

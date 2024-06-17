@@ -10,7 +10,7 @@
 		$query = $conn->query($sql);
 
 		if($query->num_rows < 1){
-			$_SESSION['error'] = 'Cannot find account with the username';
+			$_SESSION['error'] = 'Username không hợp lệ';
 		}
 		else{
 			$row = $query->fetch_assoc();
@@ -18,7 +18,7 @@
 				$_SESSION['admin'] = $row['id'];
 			}
 			else{
-				$_SESSION['error'] = 'Incorrect password';
+				$_SESSION['error'] = 'Mật khẩu không đúng';
 			}
 		}
 		

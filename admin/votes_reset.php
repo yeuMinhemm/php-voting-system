@@ -3,10 +3,10 @@
 
 	$sql = "DELETE FROM votes";
 	if($conn->query($sql)){
-		$_SESSION['success'] = "Votes reset successfully";
+		$_SESSION['success'] = "Đặt lại thành công";
 	}
 	else{
-		$_SESSION['error'] = "Something went wrong in reseting";
+		$_SESSION['error'] = "Có lỗi xảy ra";
 	}
 
 	header('location: votes.php');
