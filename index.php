@@ -17,7 +17,7 @@
         </div>
 
         <div class="login-box-body">
-            <p class="login-box-msg">Sign in to start your session</p>
+            <p class="login-box-msg">Đăng nhập để bầu cử</p>
 
             <form
                 action="login.php"
@@ -28,7 +28,7 @@
                         type="text"
                         class="form-control"
                         name="voter"
-                        placeholder="Voter's ID"
+                        placeholder="ID cử tri"
                         required
                     >
                     <span class="glyphicon glyphicon-user form-control-feedback"></span>
@@ -38,18 +38,18 @@
                         type="password"
                         class="form-control"
                         name="password"
-                        placeholder="Password"
+                        placeholder="Mật khẩu"
                         required
                     >
                     <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                 </div>
                 <div class="row">
-                    <div class="col-xs-4">
+                    <div class="col-xs-5">
                         <button
                             type="submit"
                             class="btn btn-primary btn-block btn-flat"
                             name="login"
-                        ><i class="fa fa-sign-in"></i> Sign In</button>
+                        ><i class="fa fa-sign-in"></i> Đăng nhập</button>
                     </div>
                 </div>
             </form>
