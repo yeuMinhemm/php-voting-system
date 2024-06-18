@@ -122,12 +122,6 @@
             getRow(id);
         });
 
-        $(document).on('click', '.platform', function(e) {
-            e.preventDefault();
-            var id = $(this).data('id');
-            getRow(id);
-        });
-
     });
 
     function getRow(id) {
@@ -143,9 +137,8 @@
                 $('#edit_firstname').val(response.firstname);
                 $('#edit_lastname').val(response.lastname);
                 $('#posselect').val(response.position_id).html(response.description);
-                $('#edit_platform').val(response.platform);
+
                 $('.fullname').html(response.firstname + ' ' + response.lastname);
-                $('#desc').html(response.platform);
             }
         });
     }
